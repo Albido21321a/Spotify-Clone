@@ -1,0 +1,10 @@
+.invert {
+    filter: invert(1);
+}
+
+.white {
+    color: #b3b3b3;
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 14px;
+}
