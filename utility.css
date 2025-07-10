@@ -7,4 +7,20 @@
     font-family: 'poppins';
     font-weight: 600;
     font-size: 14px;
+    
+}
+
+.white-all {
+    color: white;
+    font-family: 'Poppins';
+}
+
+.font-1 {
+    font-size: 22px;
+}
+
+
+.font-2 {
+    font-size: 13px;
+    margin-top: 3px;
 }
