@@ -21,8 +21,10 @@ nav {
 }
 
 .content {
+  box-sizing: border-box;
+  padding: 0 6px;
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
 
@@ -35,11 +37,13 @@ nav {
   width: clamp(430px,23vw,500px);
   justify-content: space-between;
   border-radius: 7px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   padding: 10px 0;
 }
 
 .right-panel {
+  box-sizing: border-box;
+  padding-left: 2%;
   background-color: #121212;
   width: 75.7vw;
   height: 85vh;
@@ -66,6 +70,7 @@ nav {
 }
 
 .search-bar {
+  /* margin-left: auto; */
   height: 49px;
   background-color: #282828;
   border-radius: 60px;
@@ -79,7 +84,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: auto;
+  margin-left: auto;
 }
 
 .search-bar img {
@@ -108,7 +113,7 @@ nav {
   display: flex;
   gap: 7px;
   padding-left: 20px;
-  margin-left: auto;
+  /* margin-left: auto; */
   align-items: center;
 }
 
@@ -304,4 +309,71 @@ nav {
 
 .mixed::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, Opera */
+}
+
+
+.trending {
+  /* margin: 5px 0; */
+  box-sizing: border-box;
+  padding: 0 1%;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.show {
+  margin: 20px 0;
+}
+
+
+.card-container {
+  display: flex;
+    box-sizing: border-box;
+  padding: 2% 0%;
+  height: 270px;
+  width: 100%;
+  /* background-color: pink; */
+  overflow: hidden;
+}
+
+.cards {
+  box-sizing: border-box;
+  padding: 1% 1%;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  width: 190px;
+  height: 240px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.card-img {
+  height: 170px;
+  width: 170px;
+  /* background-color: blue; */
+}
+
+.card-img img{
+  border-radius: 10px;
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 4% 0;
+}
+
+.text-content p {
+  margin: 1% 0;
+  padding: 0;
+}
+
+.cards:hover {
+  background-color: #1e1e1e;
 }
