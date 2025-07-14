@@ -19,8 +19,20 @@
     font-size: 22px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .font-2 {
     font-size: 13px;
     margin-top: 3px;
+}
+
+.white-all1 {
+    font-weight: 500;
+    color: white;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 2px 0;
 }

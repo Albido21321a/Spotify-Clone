@@ -32,9 +32,9 @@ nav {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 85vh;
+  height: 84.6vh;
   background-color: #121212;
-  width: clamp(430px,23vw,500px);
+  width: clamp(430px,28vw,600px);
   justify-content: space-between;
   border-radius: 7px;
   /* margin-left: 10px; */
@@ -42,11 +42,15 @@ nav {
 }
 
 .right-panel {
+  overflow-x:hidden;
+  overflow-y: scroll;
+  /* overflow-x: scroll; */
   box-sizing: border-box;
   padding-left: 2%;
   background-color: #121212;
-  width: 75.7vw;
-  height: 85vh;
+  /* width: 75.7vw; */
+  flex-grow: 1;
+  height: 84.6vh;
   border-radius: 12px;
 }
 
@@ -315,7 +319,7 @@ nav {
 .trending {
   /* margin: 5px 0; */
   box-sizing: border-box;
-  padding: 0 1%;
+  padding: 0 3% 0 0;
   display: flex;
   height: 50px;
   justify-content: space-between;
@@ -329,8 +333,8 @@ nav {
 .card-container {
   display: flex;
     box-sizing: border-box;
-  padding: 2% 0%;
-  height: 270px;
+  padding: 0.5% 0%;
+  height: 330px;
   width: 100%;
   /* background-color: pink; */
   overflow: hidden;
@@ -339,12 +343,13 @@ nav {
 .cards {
   box-sizing: border-box;
   padding: 1% 1%;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
   width: 190px;
-  height: 240px;
-  border-radius: 10px;
+  min-height: 200px;
+  max-height: 270px;
+  border-radius: 6px;
   background-color: transparent;
 }
 
@@ -355,25 +360,187 @@ nav {
 }
 
 .card-img img{
-  border-radius: 10px;
+  border-radius: 6px;
 height: 100%;
 width: 100%;
 object-fit: cover;
 }
+
 .text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
+  width: 100%;
+  text-align: left;
   margin: 0;
   box-sizing: border-box;
   padding: 4% 0;
+  /* overflow: hidden; */
 }
 
 .text-content p {
   margin: 1% 0;
   padding: 0;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; Limits to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cards:hover {
   background-color: #1e1e1e;
+}
+
+
+.art-img {
+  height: 180px;
+  width: 180px;
+  /* background-color: blue; */
+}
+
+.art-img img{
+  border-radius: 6px;
+height: 100%;
+width: 100%;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.hr-spotify {
+  margin: 0% 0 5% 0;
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #333;  /* old IE */
+  background-color: #333;  /* Modern Browsers */
+}
+
+
+h5 {
+  color: white;
+}
+
+.main-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+    /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.main-links ul li {
+  margin: 8px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.left-link {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hr-spotify1 {
+  margin: 3% 0 2% 0;
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #333;  /* old IE */
+  background-color: #333;  /* Modern Browsers */
+}
+
+.copyright {
+  font-size: 13px;
+  color: #b3b3b3;
+  font-family: 'poppins';
+  padding: 0 0 4% 0;
+}
+
+.right-link {
+  margin-left: auto;
+  width: 13%;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.insta-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(41, 41, 41);
+  border-radius: 50%;
+}
+
+.icons img {
+  padding-top: 3px;
+  height: 20px;
+  width: 20px;
+}
+
+
+.right-panel::-webkit-scrollbar {
+  width: 13px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+  }
+
+.right-panel::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.footer-final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1%;
+  box-sizing: border-box;
+  border: 7px solid black;
+  width: 100%;
+  height: 76px;
+  background: linear-gradient(to right, #b900b4, #4286f4);
+}
+
+.previews {
+  display: flex;
+  flex-direction: column;
+}
+
+.previews p {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'poppins';
+}
+
+
+.login-btn1 {
+  height: 50px;
+  background-color: white;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: 'Poppins';
+  border-radius: 2000px;
+  font-weight: 700;
+  margin-right: 0px;
+}
+
+.ps {
+  font-size: 13px;
+  font-weight: 700;
 }
