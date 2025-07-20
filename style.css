@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+.wrapper {
+  animation: fadein 0.5s ease-in;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   background-color: black;
   margin: 0;
@@ -9,6 +18,7 @@ body {
 }
 
 nav {
+  animation: fadeout 0.5s ease-in-out;
   position: relative;
   margin-top: 0px;
   height: 55px;
@@ -21,6 +31,7 @@ nav {
 }
 
 .content {
+   flex: 1;
   box-sizing: border-box;
   padding: 0 6px;
   display: flex;
@@ -29,20 +40,20 @@ nav {
 
 
 .left-panel {
+  flex-shrink: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 84.6vh;
+  height: calc(100vh - 55px - 76px - 10px); /* subtract 10px buffer */
   background-color: #121212;
-  width: clamp(430px,28vw,600px);
+  width: clamp(300px, 31vw, 430px);
   justify-content: space-between;
   border-radius: 7px;
-  /* margin-left: 10px; */
   padding: 10px 0;
 }
 
 .right-panel {
-  overflow-x:hidden;
+  overflow-x: hidden;
   overflow-y: scroll;
   /* overflow-x: scroll; */
   box-sizing: border-box;
@@ -50,7 +61,7 @@ nav {
   background-color: #121212;
   /* width: 75.7vw; */
   flex-grow: 1;
-  height: 84.6vh;
+  height: calc(100vh - 55px - 76px - 10px); /* subtract 10px buffer */
   border-radius: 12px;
 }
 
@@ -218,7 +229,8 @@ nav {
   font-size: 14px;
 }
 
-.create-btn, .create-btn1 {
+.create-btn,
+.create-btn1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,7 +244,7 @@ nav {
 }
 
 .well {
-   box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: white;
@@ -253,7 +265,8 @@ nav {
 .alinks {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* optional: spacing between list sections */
+  gap: 10px;
+  /* optional: spacing between list sections */
 }
 
 .alinks ul {
@@ -271,7 +284,8 @@ nav {
 .alinks ul li a {
   display: flex;
   align-items: center;
-  gap: 5px; /* spacing between icon and text if you add any */
+  gap: 5px;
+  /* spacing between icon and text if you add any */
   color: white;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -290,7 +304,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:30px;
+  height: 30px;
   width: 100px;
   background-color: transparent;
   border-radius: 40px;
@@ -312,7 +326,8 @@ nav {
 }
 
 .mixed::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, Opera */
+  display: none;
+  /* for Chrome, Safari, Opera */
 }
 
 
@@ -332,7 +347,7 @@ nav {
 
 .card-container {
   display: flex;
-    box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0.5% 0%;
   height: 330px;
   width: 100%;
@@ -359,11 +374,11 @@ nav {
   /* background-color: blue; */
 }
 
-.card-img img{
+.card-img img {
   border-radius: 6px;
-height: 100%;
-width: 100%;
-object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .text-content {
@@ -396,12 +411,12 @@ object-fit: cover;
   /* background-color: blue; */
 }
 
-.art-img img{
+.art-img img {
   border-radius: 6px;
-height: 100%;
-width: 100%;
-border-radius: 50%;
-object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .hr-spotify {
@@ -409,8 +424,10 @@ object-fit: cover;
   border: none;
   height: 1px;
   /* Set the hr color */
-  color: #333;  /* old IE */
-  background-color: #333;  /* Modern Browsers */
+  color: #333;
+  /* old IE */
+  background-color: #333;
+  /* Modern Browsers */
 }
 
 
@@ -423,7 +440,7 @@ h5 {
   padding: 0;
   display: flex;
   flex-direction: column;
-    /* align-items: center; */
+  /* align-items: center; */
   /* justify-content: center; */
 }
 
@@ -450,8 +467,10 @@ h5 {
   border: none;
   height: 1px;
   /* Set the hr color */
-  color: #333;  /* old IE */
-  background-color: #333;  /* Modern Browsers */
+  color: #333;
+  /* old IE */
+  background-color: #333;
+  /* Modern Browsers */
 }
 
 .copyright {
@@ -495,7 +514,7 @@ h5 {
 
 .right-panel::-webkit-scrollbar-thumb {
   background-color: #8f8f8f;
-  }
+}
 
 .right-panel::-webkit-scrollbar-track {
   background-color: transparent;
@@ -543,4 +562,31 @@ h5 {
 .ps {
   font-size: 13px;
   font-weight: 700;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+@keyframes fadeout {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
