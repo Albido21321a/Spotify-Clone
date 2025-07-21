@@ -475,6 +475,7 @@ h5 {
   width: 70%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hr-spotify1 {
@@ -496,17 +497,19 @@ h5 {
 }
 
 .right-link {
-  margin-left: auto;
+  margin: 0 auto;
   width: 13%;
   display: flex;
-  gap: 20px;
+  gap: 10%;
 }
 
 .footer-links {
+  margin: 0 auto;
   display: flex;
 }
 
 .insta-icon {
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,4 +613,47 @@ h5 {
   .left-panel {
     display: none;
   }
+}
+
+
+@media (max-width:885px) {
+  .left-link {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.search-bar {
+  display: none;
+}
+
+nav  {
+  animation: fadein 0.5s ease-in;
+  gap: 10px;
+}
+
+.mid-right {
+  animation: fadein 0.5s ease-in;
+  display: none;
+}
+
+.footer-final {
+  animation: fadein 0.5s ease-in;
+  height: auto;
+}
+
+.previews {
+  animation: fadein 0.5s ease-in;
+  font-size: 12px;
+}
+
+.login-btn1 {
+  animation: fadein 0.5s ease-in;
+  max-width:200px;
+  min-width: 100px;
+}
+
 }
